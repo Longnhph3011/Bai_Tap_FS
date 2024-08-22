@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            margin: 0;
+        }
+
+
+
+        span {
+            background-color: black;
+            color: white;
+            margin-bottom: 0;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style=" color: blue;
+            background-color: yellow;">GIT LÀ GÌ? CÁC LỆNH CƠ BẢN CỦA GIT</h1>
+    <h2>Các lệnh git cơ bản</h2>
+    <div>
+        <span>1&#41 Git config</span>
+        <p>Tác dụng: Để set user name và email của bạn trong main configaration file. Cách xài: Để kiểm tra tên và kiểu
+            email trong cấu hình dùng git config--global user.name và git config --global user.email. Để set email hoặc
+            tên
+            mới git config --global user.name ="Hải Nguyễn" và git config--global user.email="hainguyen@gmail.com"</p>
+    </div>
+    <div>
+        <span>2&#41 Git init</span>
+        <p>Tác dụng: Khởi tạo 1 git repository 1 project mới hoặc đã có.</p>
+        <p>Cách xài: git init trong thư mục gốc của dự án.</p>
+    </div>
+    <div>
+        <span>3&#41 git clone</span>
+        <p>Tác dụng: Copy 1 git repository từ remote source</p>
+        <p>Cách xài: git clone <:clone git url:></:clone>
+        </p>
+    </div>
+    <div>
+        <span>4&#41 git status</span>
+        <p>Tác dụng: Để check trạng thái của những file bạn đã thay đổi trong thư mục làm việc. VD: Tất cả các thay đổi
+            cuối cùng từ lần commit cuối cùng.</p>
+        <p>Cách xài: git status trong thư mục làm việc.</p>
+    </div>
+    <div>
+        <span>5&#41 git add</span>
+        <p>Tác dụng: Thêm thay đổi đến stage/index trong thư mục làm việc.</p>
+        <p>Cách xài: git add</p>
+    </div>
+    <div>
+        <span>6&#41 git commit</span>
+        <p>Tác dụng: commit nghĩa là một action để Git lưu lại một snapshot của các sự thay đổi trong thư mục làm việc.
+            Và các tập tin, thư mục được thay đổi đã phải nằm trong Staging Area. Mỗi lần commit nó sẽ được lưu lại lịch
+            sử
+            chỉnh sửa của code kèm theo tên và địa chỉ email của người commit. Ngoài ra trong Git bạn cũng có thể khôi
+            phục
+            lại tập tin trong lịch sử commit của nó để chia cho một branch khác, vì vậy bạn sẽ dễ dàng khôi phục lại các
+            thay đổi trước đó.</p>
+        <p>Cách dùng: git commit -m"Đây là massage, bạn dùng để note những thay đổi để sau này dễ dò lại"</p>
+    </div>
+    <div>
+        <span>7&#41 git push/ git pull</span>
+        <p>Tác dụng: Push hoặc Pull các thay đổi đến remote. Nếu bạn đã added và commit các thay đổi và bạn muốn đẩy nó
+            lên hoặc remote của bạn đã update và bạn apply tất cả các thay đổi đó trên code của mình.</p>
+        <br>
+    </div>
+    <div style="display: flex; ">
+        <span style="margin-bottom: 10px; margin-right: 10px ;">8&#41 git remote</span>
+        <p>Tác dụng: Để
+            check
+            remote/source
+            bạn có hoặc add thêm remote
+            Cách dùng: git remote
+            để kiểm tra và liệt kê. Và git remote add <:remote_url:> để thêm.</p>
+    </div>
+    <div>
+        <span>9&#41 git add</span>
+        <p>Tác dụng: Để đưa một tập tin vào Staging Area</p>
+        <p>Cách dùng: git add tên_file hoặc muốn thêm hêt file của thư mục thì git add all</p>
+    </div>
+
+
+    <div style="margin-bottom: 0; text-align: center; background-color: rgb(239, 156, 0); color: blue;">
+        <h1 style="margin-bottom: 0;">
+            HỢP ÂM
+        </h1>
+        <h1 style="margin:0">
+            STREAM ĐẾN BAO GIỜ - ĐỘ MIXI Ft. BẠN SÁNG TÁC</h1>
+    </div>
+    <div style="margin :0; text-align: center; background-color: antiquewhite;">
+        <p>Refrain:</p>
+        <p> [Cadd9]Tối đến là vô làm, Tính ra thì hơi nhàn</p>
+        <p>[G]Nhìn màn hình Stream tới khi đêm tàn</p>
+        <p>[Cadd9]Lân la vài câu chuyện, Con game cùng nhau luyện</p>
+        <p> [A7]Một mình ngồi [D]đó nói [G]cười</p>
+    </div>
+    <div style="margin: 0; text-align: center; background-color: orange;">
+        <p style="padding-top: 20px;"> Interlude:</p>
+        <p>Đấy, trên stream lúc nào tôi cũng cười cười nói nói thế đấy.</p>
+        <p> Nhưng mà ai biết trên stream thế nào đâu các bạn.</p>
+        <p> Cuộc sống mà!!!</p>
+
+
+        <p style="padding-top: 3    0px;"> [G]Nói ra thì bảo kể khổ chứ khô gà tôi bán toàn lỗ thôi</p>
+        <p> [Cadd9]Quanh năm suốt tháng bàn bè đi</p>
+        <p style="padding-bottom: 20px;"> du lịch còn tôi thì cứ ngồi lì một chỗ ấy</p>
+    </div>
+
+
+    <div style="margin: 20px 0;">
+        <h1 style=" background-color: cyan;">NHỮNG BÀI THƠ CHẾ HAY</h1>
+    </div>
+    <div style="margin: 20px 0; background-color: pink;">
+        <p>1.Trời buồn trời đổ cơn mưa</p>
+        <p>Ta buồn ta ngủ từ trưa đến chiều</p>
+        <p>Ngủ xong dậy ăn cơm chiều</p>
+        <p>Ăn xong lại ngủ từ chiều đến mai</p>
+    </div>
+
+    <div style="background-color: orange; text-align: center; color: red; padding: 1 1 1 1;">
+        <h1>HIT WITH ♡</h1>
+    </div>
+
+</body>
+
+</html>
