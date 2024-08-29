@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .middle {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            border: 1px solid black;
+            width: 800px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            width: 100%;
+            position: relative;
+            background-color: purple;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .header .menu {
+            position: absolute;
+            background-color: aqua;
+            height: 25px;
+            width: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-10%, -50%);
+        }
+
+        .content {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .content-left .article1 {
+            background-color: cyan;
+            width: 500px;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+
+        .content-left .article2 {
+            background-color: cyan;
+            width: 500px;
+            height: 200px;
+        }
+
+        .content-right {
+            flex: 1;
+            background-color: blue;
+            margin-left: 10px;
+        }
+
+        .footer {
+            background-color: palevioletred;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="middle">
+        <div class="container">
+            <div class="header">
+                Header
+                <div class="menu">
+                    Menu
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-left">
+                    <div class="article1">
+                        Article1
+                    </div>
+                    <div class="article2">
+                        Artical2
+                    </div>
+                </div>
+                <div class="content-right">
+                    sidebar
+                </div>
+            </div>
+            <div class="footer">
+                Footer
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

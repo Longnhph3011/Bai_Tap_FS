@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .container .item {
+            text-align: center;
+            line-height: 50px;
+            width: 20%;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            border-left: 2px solid white;
+            position: relative;
+
+        }
+
+        .container .item:hover {
+            background-color: red;
+        }
+
+        .item:hover .sub-menu {
+            display: flex;
+
+        }
+
+        .sub-menu {
+            display: none;
+            width: 1000px;
+            position: absolute;
+            left: -100%;
+            
+
+        }
+
+        .sub-menu .sub-item {
+            flex: 1;
+            background-color: red;
+            border-left: 1px solid white;
+            text-align: center;
+            line-height: 50px;
+
+        }
+
+        .sub-menu .sub-item:hover {
+            background-color: cyan;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">Chính trị-xã hội</div>
+        <div class="item">Thế giới
+
+            <div class="sub-menu">
+                <div class="sub-item">Thư viện pháp luật</div>
+                <div class="sub-item">Sống khỏe</div>
+
+                <div class="sub-item">Pháp luật</div>
+
+            </div>
+        </div>
+
+        <div class="item">Nhịp sống trẻ</div>
+
+        <div class="item">Giáo dục</div>
+
+        <div class="item">Kinh tế</div>
+
+    </div>
+</body>
+
+</html>

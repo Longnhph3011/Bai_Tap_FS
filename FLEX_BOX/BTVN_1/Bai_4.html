@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: pink;
+            height: 50px;
+        }
+
+        .content {
+            margin-top: 10px;
+            display: flex;
+            margin-bottom: 10px;
+            gap: 10px;
+        }
+
+        .content .content-left {
+            width: 800px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content .content-left .left-top {
+            background-color: aquamarine;
+            height: 60%;
+
+        }
+
+        .content .content-left .left-bottom {
+            margin-top: 10px;
+            display: flex;
+            height: 40%;
+
+        }
+
+        .left-bottom .fs {
+            height: 100%;
+            width: 60%;
+            margin-right: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .fs .first {
+            background-color: red;
+            height: 40%;
+
+        }
+
+        .fs .second {
+
+            background-color: orange;
+            height: 55%;
+        }
+
+        .left-bottom .third {
+            width: 40%;
+            background-color: purple;
+            height: 100%;
+        }
+
+        .content-right {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        .content-right .content-1 {
+            gap: 10px;
+            display: flex;
+            height: 30%;
+        }
+
+        .content-1 .content-1-left,
+        .content-1 .content-1-right {
+            box-sizing: border-box;
+        }
+
+        .content-1 .content-1-left {
+            background-color: purple;
+            width: 70%;
+
+        }
+
+        .content-1 .content-1-right {
+            background-color: green;
+            width: 30%;
+        }
+
+        .content-2 {
+            background-color: yellow;
+            height: 10%;
+            margin-top: 10px;
+        }
+
+        .content-3 {
+            margin-top: 10px;
+            height: 50%;
+            display: flex;
+            gap: 10px;
+        }
+
+        .content-3-1 {
+            background-color: blue;
+            height: 100%;
+            width: 33.33%;
+        }
+
+        .content-3-2 {
+            background-color: red;
+            height: 100%;
+            width: 33.33%;
+        }
+
+        .content-3-3 {
+            background-color: blue;
+            height: 100%;
+            width: 33.33%;
+        }
+
+        .content-4 {
+            background-color: bisque;
+
+            height: 10%;
+            margin-top: 10px;
+        }
+
+
+        .footer {
+            margin-top: 10px;
+            background-color: black;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+
+        </div>
+        <div class="content">
+            <div class="content-left">
+                <div class="left-top"></div>
+                <div class="left-bottom">
+                    <div class="fs">
+                        <div class="first"></div>
+                        <div class="second"></div>
+                    </div>
+                    <div class="third"></div>
+
+                </div>
+
+            </div>
+            <div class="content-right">
+                <div class="content-1">
+                    <div class="content-1-left"></div>
+                    <div class="content-1-right"></div>
+                </div>
+                <div class="content-2"></div>
+                <div class="content-3">
+                    <div class="content-3-1"></div>
+                    <div class="content-3-2"></div>
+
+                    <div class="content-3-3"></div>
+
+
+                </div>
+                <div class="content-4"></div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>

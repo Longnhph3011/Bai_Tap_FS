@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form {
+            background-color: rgb(207, 244, 244);
+            border: 1px solid black;
+            width: 500px;
+            padding: 10px;
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .label {
+            width: 200px;
+            border: 1px solid black;
+            color: green;
+            box-sizing: border-box;
+            height: 50px;
+            padding-left: 5px;
+            align-items: center;
+            display: flex;
+        }
+
+        .input,
+        select {
+            flex: 1;
+            height: 50px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        select[multiple] {
+            height: auto;
+            overflow: hidden;
+            min-height: 50px;
+        }
+
+        .form-group.phai {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group.phai span {
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form">
+        <div class="form-group">
+            <label class="label">Họ và tên</label>
+            <input type="text" name="" placeholder="ABC" class="input">
+        </div>
+
+        <div class="form-group">
+            <label class="label">Địa chỉ</label>
+            <input type="text" name="" placeholder="Q10" class="input">
+        </div>
+
+        <div class="form-group">
+            <label class="label">Điện thoại</label>
+            <input type="text" name="" placeholder="123" class="input">
+        </div>
+
+        <div class="form-group phai">
+            <label class="label">Phái</label>
+            <input type="radio" name="gender" value="male" id="">
+            <span>Nam</span>
+            <input type="radio" name="gender" value="female" id="" checked>
+            <span>Nữ</span>
+        </div>
+
+        <div class="form-group">
+            <label class="label">Nghề nghiệp</label>
+            <select name="" id="" class="input">
+                <option value="teacher">Giáo Viên</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="label">Chọn sản phẩm</label>
+            <select name="products" class="input" multiple size="3">
+                <option value="toothpaste">Kem đánh răng</option>
+                <option value="detergent">Bột giặt</option>
+                <option value="shower_gel">Sữa tắm</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="label">Số người dự đoán tham gia</label>
+            <input type="text" name="" placeholder="123" class="input">
+        </div>
+    </form>
+</body>
+
+</html>
