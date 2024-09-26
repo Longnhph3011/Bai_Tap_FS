@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            height: 50px;
+            background-color: pink;
+
+        }
+
+        .content {
+            height: 800px;
+            display: grid;
+            grid-template-columns: 60% auto;
+            padding: 10px 0;
+
+        }
+
+        .content-left {
+            grid-column: 1;
+            height: 100%;
+        }
+
+        .content-left .top {
+            background-color: greenyellow;
+            width: 100%;
+            height: 200px;
+
+        }
+
+        .content-left .bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 30% auto;
+            gap: 10px;
+            height: 600px;
+            padding: 10px 0;
+        }
+
+        .content-left .bottom .left-1 {
+            background-color: red;
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .content-left .bottom .left-2 {
+            background-color: orange;
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .content-left .bottom .right {
+            grid-column: 2 / 3;
+            grid-row: 1 / span 2;
+            background-color: plum;
+        }
+
+        .content-right {
+            grid-template-columns: 2;
+            height: 100%;
+            padding: 0 0 0 10px;
+            display: grid;
+            grid-template-rows: 10% 5% 60% auto;
+            gap: 10px;
+        }
+
+        .content-right .right-1 {
+            display: grid;
+            grid-template-columns: 80% auto;
+            gap: 10px;
+            grid-row: 1;
+            padding-bottom: 10px;
+        }
+
+        .right-1 .left {
+            background-color: purple;
+            grid-column: 1;
+        }
+
+        .right-1 .right {
+            background-color: green;
+            grid-column: 2;
+        }
+
+        .right-2 {
+            padding: 10px 0;
+            background-color: yellow;
+            grid-row: 2;
+        }
+
+        .right-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            grid-row: 3;
+        }
+
+        .stc-1 {
+            background-color: aqua;
+            grid-column: 1;
+        }
+
+        .stc-2 {
+            background-color: red;
+            grid-column: 2;
+        }
+
+        .stc-3 {
+            background-color: aqua;
+            grid-column: 3;
+        }
+
+        .bottom-right {
+            background-color: brown;
+            display: grid;
+            margin-bottom: 10px;
+            grid-row: 4;
+
+        }
+
+        .footer {
+            background-color: black;
+            height: 50px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+
+    </div>
+    <div class="content">
+        <div class="content-left">
+            <div class="top"></div>
+            <div class="bottom">
+                <div class="left-1"></div>
+                <div class="left-2"></div>
+                <div class="right"></div>
+
+            </div>
+        </div>
+        <div class="content-right">
+            <div class="right-1">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="right-2"></div>
+            <div class="right-3">
+                <div class="stc-1"></div>
+                <div class="stc-2"></div>
+                <div class="stc-3"></div>
+            </div>
+            <div class="bottom-right"></div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>

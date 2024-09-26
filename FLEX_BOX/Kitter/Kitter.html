@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            padding: 0 0 50px 0;
+        }
+
+        .menu {
+            position: fixed;
+            display: flex;
+            top: 0;
+            z-index: 1000;
+            justify-content: space-between;
+            padding: 0 20px;
+            left: 0;
+            right: 0;
+            background-color: white;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .menu-right .cart {
+            position: relative;
+        }
+
+        .menu-right .cart span {
+            position: absolute;
+            right: -5px;
+            top: -8px;
+            background-color: red;
+            border-radius: 100%;
+            padding: 0 2px;
+            z-index: 10;
+            font-size: 15px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100vh;
+
+        }
+
+        .menu .menu-left {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .menu-left p {
+            font-size: 20px;
+            color: black;
+        }
+
+        .menu-right {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 80px;
+            color: black;
+        }
+
+        .slogan p {
+            font-family: "Sofadi One", system-ui;
+            font-weight: 300;
+            font-style: normal;
+
+        }
+
+        .banner .slogan {
+            position: absolute;
+            top: 80%;
+            right: 100px;
+            transform: translateY(-80%);
+            display: flex;
+            flex-direction: column;
+            font-size: 24px;
+            gap: 10px;
+            align-items: center;
+
+        }
+
+
+
+        .slogan .button {
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+            padding: 10px 30px;
+            width: 120px;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: red;
+        }
+
+        .section-title {
+
+            display: flex;
+            font-size: 40px;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .section-title h2 .highlight::after {
+            content: " ";
+        }
+
+        .section-title span {
+            color: red;
+
+        }
+
+        .categories {
+            padding: 50px 0;
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .category {
+            width: calc(20% - 40px);
+            margin: 0 20px;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+
+        .category img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+            border-radius: 10px;
+
+        }
+
+        .category img:hover {
+            transform: scale(1.1)
+        }
+
+        .category p {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bolder;
+            margin-top: 15px;
+        }
+
+        .category p:hover {
+            color: red;
+        }
+
+        .offer {
+            padding: 50px 0;
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+
+        .offer .block {
+            width: 30%;
+            position: relative;
+
+
+        }
+
+        .offer img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .offer .title {
+            position: absolute;
+            top: 30%;
+            left: 20px;
+
+        }
+
+        .title .card-title {
+            font-size: 30px;
+            font-weight: bolder;
+            margin: 5px 0 20px 0;
+        }
+
+        .block .button {
+            padding: 10px 15px;
+            background-color: red;
+            border-radius: 20px;
+            display: inline-block;
+            color: white;
+            transition: 0.3s ease;
+        }
+
+        .block .button:hover {
+            background-color: black;
+        }
+
+
+        .list-product {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .product {
+            width: calc(25% - 10px);
+
+        }
+
+        .product-img {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            border: 1px solid rgb(223, 208, 208);
+            border-radius: 20px;
+            position: relative;
+            font-size: 30px;
+
+        }
+
+        .product-img i {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            display: none;
+
+        }
+
+        .product-img i:hover {
+            color: red;
+        }
+
+
+        .product .product-img .product1,
+        .product .product-img .product2 {
+            border-radius: 20px;
+        }
+
+        .product .product-img .product2 {
+            display: none;
+        }
+
+        .product-img:hover .product1 {
+            display: none;
+        }
+
+        .product-img:hover .product2 {
+            display: inline-block;
+        }
+
+        .product-img:hover i {
+            display: block;
+        }
+
+        .product-details {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .product-details i {
+            color: yellow;
+        }
+
+        .product-details p {
+            color: black;
+            font-size: 20px;
+            font-weight: bolder;
+            margin-block: 5px;
+        }
+
+        .product-details p:hover {
+            color: red;
+        }
+
+        .price {
+            font-size: 20px;
+            color: red;
+            font-weight: bolder;
+        }
+
+        .img {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .service {
+            margin-bottom: 50px;
+        }
+
+        .list-services {
+
+            display: flex;
+            padding: 0 30px;
+            justify-content: space-around;
+
+        }
+
+        .list-services .service-card {
+            text-align: center;
+            width: calc(25%-30px);
+        }
+
+        .service-card h3 {
+            margin-block: 10px;
+        }
+
+        .service-card p {
+            color: gray;
+        }
+
+        .container-cta {
+            padding: 50px;
+            background-color: hsl(37.75deg 97.8% 64.31%);
+            border-radius: 100px 100px 0 0;
+            height: 600px;
+
+        }
+
+        .cta {
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .cta .cta-content {
+            align-content: center;
+            font-size: 16px;
+
+        }
+
+        .cta .cta-content h2 {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .cta .cta-content p {
+            padding: 0;
+        }
+
+        .cta .button {
+            margin-top: 30px;
+            background-color: black;
+            width: 100px;
+            padding: 8px 25px;
+            color: white;
+            font-size: 16px;
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        .cta .button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .list-brands {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .brand {
+            border-left: 1px solid gray;
+            padding: 20px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .brand:first-child {
+            border-left: none;
+        }
+
+        .footer {
+            background-color: rgb(230, 239, 246);
+            display: flex;
+            height: 300px;
+            align-items: center;
+            margin: 50px 30px;
+
+        }
+
+        .footer .footer-left {
+            width: 40%;
+            padding: 0 30px;
+
+        }
+
+
+        .footer-left .email {
+            color: red;
+            padding-bottom: 20px;
+        }
+
+
+        .contact-info {
+            display: flex;
+            padding: 10px 0;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+        }
+
+        .footer .footer-right {
+            flex: 1;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .footer-right .column {
+            width: 30%;
+        }
+
+        .footer-right p {
+            padding: 4px 0;
+        }
+
+        .footer-right p:hover {
+            color: orange;
+        }
+
+        .footer-right h2 {
+            padding: 6px 0;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="menu">
+                <div class="menu-left">
+
+                    <div class="logo">
+                        Kitter
+                    </div>
+                    <p>Home</p>
+                    <p>Shop</p>
+                    <p> Collections</p>
+                    <p>Blogs</p>
+                    <p>Contact</p>
+                </div>
+                <div class="menu-right">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-regular fa-user"></i>
+                    <div class="cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="banner">
+                <img src="pet-shop-banner-design-template-cartoon-illustration-of-cats-dogs-house-food-vector.jpg"
+                    alt="">
+                <div class="slogan">
+                    <p>High Quality</p>
+                    <p>Pet Food</p>
+                    <p>Sale up to 40% today</p>
+                    <div class="button">
+                        Shop Now
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- Section -->
+        <div class="section-1">
+            <div class="section-title">
+                <h2>
+                    <span class="highlight">Top</span> Categories
+                </h2>
+            </div>
+
+
+            <div class="categories">
+                <div class="category">
+                    <img src="category-1.jpg" alt="">
+                    <p>Cat Food</p>
+                </div>
+                <div class="category">
+                    <img src="category-1.jpg" alt="">
+                    <p>Cat Food</p>
+                </div>
+                <div class="category">
+                    <img src="category-1.jpg" alt="">
+                    <p>Cat Food</p>
+                </div>
+                <div class="category">
+                    <img src="category-1.jpg" alt="">
+                    <p>Cat Food</p>
+                </div>
+                <div class="category">
+                    <img src="category-1.jpg" alt="">
+                    <p>Cat Food</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="offer">
+
+            <div class="block">
+                <img src="hinh-nen-meo-con-sieu-dang-yeu-3.jpg" alt="">
+                <div class="title">
+                    <div class="sub-title">
+                        Selected Items. Online only
+                    </div>
+                    <div class="card-title">
+                        Hot Summer
+                        <span>Deals</span>
+                    </div>
+                    <div class="button">
+                        Read More
+                    </div>
+                </div>
+
+            </div>
+            <div class="block">
+                <img src="hinh-nen-meo-con-sieu-dang-yeu-3.jpg" alt="">
+                <div class="title">
+                    <div class="sub-title">
+                        Selected Items. Online only
+                    </div>
+                    <div class="card-title">
+                        Hot Summer
+                        <span>Deals</span>
+                    </div>
+                    <div class="button">
+                        Read More
+                    </div>
+                </div>
+
+            </div>
+            <div class="block">
+                <img src="hinh-nen-meo-con-sieu-dang-yeu-3.jpg" alt="">
+                <div class="title">
+                    <div class="sub-title">
+                        Selected Items. Online only
+                    </div>
+                    <div class="card-title">
+                        Hot Summer
+                        <span>Deals</span>
+                    </div>
+                    <div class="button">
+                        Read More
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="best-seller">
+            <div class="section-title">
+                <h2>
+                    <span class="highlight">Best</span> Seller
+                </h2>
+            </div>
+
+            <div class="list-product">
+                <div class="product">
+                    <div class="product-img">
+                        <img class="product1" src="product-2_0.jpg" alt="">
+                        <img class="product2" src="product-3_0.jpg" alt="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                    </div>
+                    <div class="product-details">
+
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i> (1)
+
+                        <p>Commodo leosa porta</p>
+                        <div class="price">$15</div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img class="product1" src="product-2_0.jpg" alt="">
+                        <img class="product2" src="product-3_0.jpg" alt="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                    </div>
+                    <div class="product-details">
+
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i> (1)
+
+                        <p>Commodo leosa porta</p>
+                        <div class="price">$15</div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img class="product1" src="product-2_0.jpg" alt="">
+                        <img class="product2" src="product-3_0.jpg" alt="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                    </div>
+                    <div class="product-details">
+
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i> (1)
+
+                        <p>Commodo leosa porta</p>
+                        <div class="price">$15</div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img class="product1" src="product-2_0.jpg" alt="">
+                        <img class="product2" src="product-3_0.jpg" alt="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                    </div>
+                    <div class="product-details">
+
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i> (1)
+
+                        <p>Commodo leosa porta</p>
+                        <div class="price">$15</div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img class="product1" src="product-2_0.jpg" alt="">
+                        <img class="product2" src="product-3_0.jpg" alt="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                    </div>
+                    <div class="product-details">
+
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i> (1)
+
+                        <p>Commodo leosa porta</p>
+                        <div class="price">$15</div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img class="product1" src="product-2_0.jpg" alt="">
+                        <img class="product2" src="product-3_0.jpg" alt="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                    </div>
+                    <div class="product-details">
+
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i> (1)
+
+                        <p>Commodo leosa porta</p>
+                        <div class="price">$15</div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img class="product1" src="product-2_0.jpg" alt="">
+                        <img class="product2" src="product-3_0.jpg" alt="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                    </div>
+                    <div class="product-details">
+
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i> (1)
+
+                        <p>Commodo leosa porta</p>
+                        <div class="price">$15</div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img class="product1" src="product-2_0.jpg" alt="">
+                        <img class="product2" src="product-3_0.jpg" alt="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                    </div>
+                    <div class="product-details">
+
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i> (1)
+
+                        <p>Commodo leosa porta</p>
+                        <div class="price">$15</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="img">
+                <img src="service-image.png" alt="">
+            </div>
+            <div class="section-title">
+                <h2>
+                    <span class="highlight">What Your Pet Needs,</span> When they need it.
+                </h2>
+            </div>
+            <div class="list-services">
+                <div class="service-card">
+                    <img src="service-icon-1.png" alt="">
+                    <h3>Free Same-Day Delivery</h3>
+                    <p>Order by 2pm local time to get free delivery on <br> orders $35+ today.</p>
+                </div>
+                <div class="service-card">
+                    <img src="service-icon-1.png" alt="">
+                    <h3>Free Same-Day Delivery</h3>
+                    <p>Order by 2pm local time to get free delivery on <br> orders $35+ today.</p>
+                </div>
+                <div class="service-card">
+                    <img src="service-icon-1.png" alt="">
+                    <h3>Free Same-Day Delivery</h3>
+                    <p>Order by 2pm local time to get free delivery on <br> orders $35+ today.</p>
+                </div>
+                <div class="service-card">
+                    <img src="service-icon-1.png" alt="">
+                    <h3>Free Same-Day Delivery</h3>
+                    <p>Order by 2pm local time to get free delivery on <br> orders $35+ today.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-cta">
+            <div class="cta">
+                <div class="cta-img">
+                    <img src="cta-banner.png" alt="">
+                </div>
+                <div class="cta-content">
+                    <img src="cta-icon.png" alt="">
+                    <h2>Taste it, love it or we’ll replace it…<br> Guaranteed!</h2>
+                    <p>At Petio, we believe your dog and cat will love their food so much that if they don’t … we’ll
+                        help you find a replacement. That’s our taste guarantee.</p>
+                    <div class="button">Find out more</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section-title">
+            <h2>
+                <span class="highlight">Popular</span>Brands
+            </h2>
+
+        </div>
+        <div class="list-brands">
+            <img class="brand" src="brand-1.jpg" alt="">
+            <img class="brand" src="brand-1.jpg" alt="">
+            <img class="brand" src="brand-1.jpg" alt="">
+            <img class="brand" src="brand-1.jpg" alt="">
+            <img class="brand" src="brand-1.jpg" alt="">
+        </div>
+
+
+        <div class="footer">
+            <div class="footer-left">
+                <div class="logo">Kitter</div>
+                <p>If you have any question, please contact us at</p>
+                <p class="email">support@gmail.com</p>
+                <div class="contact-info">
+                    <i class="fa-solid fa-location-dot"></i> <span>30 Buttonwood St.Pataskala OH 43062</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fa-solid fa-phone"></i> <span>(+1)-6234-56-789-1011</span>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="column">
+                    <h2>Corporate</h2>
+                    <p>Careers</p>
+                    <p>Careers</p>
+                    <p>Careers</p>
+                    <p>Careers</p>
+                    <p>Careers</p>
+                    <p>Careers</p>
+
+                </div>
+                <div class="column">
+                    <h2>Corporate</h2>
+                    <p>Careers</p>
+                    <p>Careers</p>
+                    <p>Careers</p>
+                    <p>Careers</p>
+                    <p>Careers</p>
+                    <p>Careers</p>
+                </div>
+                <div class="column">
+                    <h2>Corporate</h2>
+                    <p>Careers</p>
+                    <p>Careers</p>
+                    <p>Careers</p>
+                    <p>Careers</p>
+                    <p>Careers</p>
+                    <p>Careers</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

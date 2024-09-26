@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            height: 100px;
+            background-color: pink;
+        }
+
+        .menu {
+            height: 50px;
+            background-color: blue;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 20% 60% auto;
+            height: 500px;
+
+        }
+
+        .content .left {
+            background-color: lightgreen;
+        }
+
+        .content .middle {
+            background-color: green;
+        }
+
+        .content .right {
+            background-color: orange;
+        }
+
+        .footer {
+            height: 50px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="content">
+            <div class="left">Left</div>
+            <div class="middle">Content</div>
+            <div class="right">Right</div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>

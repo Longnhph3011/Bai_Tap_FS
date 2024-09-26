@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        header .menu {
+            height: 50px;
+            line-height: 50px;
+            width: 100%;
+            display: flex;
+            background-color: cyan;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+
+        }
+
+        .banner {
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        .banner img {
+            width: 100vw;
+            height: auto;
+        }
+
+        .menu .item {
+            font-size: 30px;
+            text-align: center;
+            width: 20%;
+        }
+
+        .menu .item:hover {
+            background-color: yellow;
+            color: red;
+        }
+
+
+        /* list product */
+        .list-product {
+            margin-right: 0;
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            width: calc(25% - 50px);
+            margin-top: 20px;
+            box-shadow: 2px 2px 10px #333;
+            position: relative;
+            margin: 20px 25px;
+            border-radius: 0 0 10% 10%;
+            overflow: hidden;
+            height: 330px;
+
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            border-radius: 0 0 0 30%;
+        }
+
+        .product .infor {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .infor .description {
+            margin-top: 10px;
+
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .infor .price {
+            margin-top: 10px;
+            color: red;
+            font-size: 20px;
+            font-weight: bolder;
+
+
+        }
+
+        .infor .button {
+            position: absolute;
+            bottom: 0;
+            padding: 10px 0;
+            width: 100%;
+            background-color: cyan;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        .infor .button:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .sale {
+            position: absolute;
+            padding: 5px;
+            background-color: red;
+            top: 0;
+
+
+        }
+
+        .footer {
+            margin-top: 50px;
+        }
+
+        .footer p:first-child {
+            font-size: 30px;
+            font-weight: bolder;
+
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <div class="item">Home</div>
+            <div class="item">Menu</div>
+            <div class="item">About</div>
+            <div class="item">Contact</div>
+            <div class="item"> Me</div>
+        </div>
+        <div class="banner">
+            <img src="/FLEX_BOX/BTVN_2/Bai_3/in-banner-quang-cao-do-an-5-1.jpg" alt="">
+        </div>
+
+    </header>
+
+    <div class="content">
+
+        <div class="list-product">
+            <div class="product">
+                <img src="chup-hinh-mon-an-dep-c-photo-0002.jpg" alt="">
+                <div class="infor">
+                    <div class="description">
+                        Món ăn ABC
+                    </div>
+                    <div class="price">
+                        50.000 VNĐ
+                    </div>
+                    <div class="button">
+                        Gọi món
+                    </div>
+                </div>
+                <div class="sale">
+                    Sale 20%
+                </div>
+            </div>
+            <div class="product">
+                <img src="chup-hinh-mon-an-dep-c-photo-0002.jpg" alt="">
+                <div class="infor">
+                    <div class="description">
+                        Món ăn ABC
+                    </div>
+                    <div class="price">
+                        50.000 VNĐ
+                    </div>
+                    <div class="button">
+                        Gọi món
+                    </div>
+                </div>
+                <div class="sale">
+                    Sale 20%
+                </div>
+            </div>
+            <div class="product">
+                <img src="chup-hinh-mon-an-dep-c-photo-0002.jpg" alt="">
+                <div class="infor">
+                    <div class="description">
+                        Món ăn ABC
+                    </div>
+                    <div class="price">
+                        50.000 VNĐ
+                    </div>
+                    <div class="button">
+                        Gọi món
+                    </div>
+                </div>
+                <div class="sale">
+                    Sale 20%
+                </div>
+            </div>
+            <div class="product">
+                <img src="chup-hinh-mon-an-dep-c-photo-0002.jpg" alt="">
+                <div class="infor">
+                    <div class="description">
+                        Món ăn ABC
+                    </div>
+                    <div class="price">
+                        50.000 VNĐ
+                    </div>
+                    <div class="button">
+                        Gọi món
+                    </div>
+                </div>
+                <div class="sale">
+                    Sale 20%
+                </div>
+            </div>
+            <div class="product">
+                <img src="chup-hinh-mon-an-dep-c-photo-0002.jpg" alt="">
+                <div class="infor">
+                    <div class="description">
+                        Món ăn ABC
+                    </div>
+                    <div class="price">
+                        50.000 VNĐ
+                    </div>
+                    <div class="button">
+                        Gọi món
+                    </div>
+                </div>
+                <div class="sale">
+                    Sale 20%
+                </div>
+            </div>
+            <div class="product">
+                <img src="chup-hinh-mon-an-dep-c-photo-0002.jpg" alt="">
+                <div class="infor">
+                    <div class="description">
+                        Món ăn ABC
+                    </div>
+                    <div class="price">
+                        50.000 VNĐ
+                    </div>
+                    <div class="button">
+                        Gọi món
+                    </div>
+                </div>
+                <div class="sale">
+                    Sale 20%
+                </div>
+            </div>
+            <div class="product">
+                <img src="chup-hinh-mon-an-dep-c-photo-0002.jpg" alt="">
+                <div class="infor">
+                    <div class="description">
+                        Món ăn ABC
+                    </div>
+                    <div class="price">
+                        50.000 VNĐ
+                    </div>
+                    <div class="button">
+                        Gọi món
+                    </div>
+                </div>
+                <div class="sale">
+                    Sale 20%
+                </div>
+            </div>
+            <div class="product">
+                <img src="chup-hinh-mon-an-dep-c-photo-0002.jpg" alt="">
+                <div class="infor">
+                    <div class="description">
+                        Món ăn ABC
+                    </div>
+                    <div class="price">
+                        50.000 VNĐ
+                    </div>
+                    <div class="button">
+                        Gọi món
+                    </div>
+                </div>
+                <div class="sale">
+                    Sale 20%
+                </div>
+            </div>
+            <div class="product">
+                <img src="chup-hinh-mon-an-dep-c-photo-0002.jpg" alt="">
+                <div class="infor">
+                    <div class="description">
+                        Món ăn ABC
+                    </div>
+                    <div class="price">
+                        50.000 VNĐ
+                    </div>
+                    <div class="button">
+                        Gọi món
+                    </div>
+                </div>
+                <div class="sale">
+                    Sale 20%
+                </div>
+            </div>
+            <div class="product">
+                <img src="chup-hinh-mon-an-dep-c-photo-0002.jpg" alt="">
+                <div class="infor">
+                    <div class="description">
+                        Món ăn ABC
+                    </div>
+                    <div class="price">
+                        50.000 VNĐ
+                    </div>
+                    <div class="button">
+                        Gọi món
+                    </div>
+                </div>
+                <div class="sale">
+                    Sale 20%
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>Thế giới ẩm thực</p>
+        <p> 09xxxxxxxxx</p>
+        <p>Số 78 duy Tân</p>
+        <p>Truy cập trang chủ: <a href="index.html">tại đây</a></p>
+    </div>
+</body>
+
+</html>

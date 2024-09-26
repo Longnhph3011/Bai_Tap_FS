@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            background-color: rgba(36, 233, 141, 1);
+            width: 100%;
+            height: 300px;
+            border-bottom-left-radius: 40%;
+        }
+
+        .header .header-left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header .header-left p {
+            margin: 0;
+
+
+        }
+
+        .header-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 10px;
+            font-size: 30px;
+            margin-right: 100px;
+        }
+
+        .infor {
+            margin-block: 20px;
+            background-color: rgb(68 112 151);
+            border-radius: 50%;
+            width: 100%;
+            height: 100px;
+        }
+
+        .infor p {
+            display: flex;
+            justify-content: center;
+            line-height: 100px;
+            color: orange;
+        }
+
+        .content {
+            height: 600px;
+            margin-block: 10px;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .content-left {
+            width: 60%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+
+
+        }
+
+        .content-left .item-left {
+            width: 30%;
+            height: 250px;
+        }
+
+        .item-left .img {
+            width: 100%;
+            height: 200px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin: 0;
+            display: block;
+
+        }
+
+        .item-left p {
+            margin: 0;
+            background-color: cyan;
+
+        }
+
+        .content-right {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .content-right .item {
+            height: calc(100% / 7);
+            padding: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            border: 1px solid orange;
+        }
+
+        .content-right p {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .block {
+            background-color: cyan;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+
+        .footer {
+            margin-top: 50px;
+            height: 100px;
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <p class="item">ABC</p>
+            <p class="item">ABC</p>
+        </div>
+        <div class="header-right">
+            <i class="fa-solid fa-house"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+    </div>
+    <div class="infor">
+        <p>Information</p>
+    </div>
+
+    <div class="content">
+        <div class="content-left">
+            <div class="item-left">
+                <img class="img"
+                    src="/FLEX_BOX/BTVN_2/Bai_4/pngtree-commercial-learning-character-education-and-training-png-image_2608679.jpg"
+                    alt="">
+                <p>HAUI</p>
+                <p>2010-2020</p>
+            </div>
+            <div class="item-left">
+                <img class="img"
+                    src="/FLEX_BOX/BTVN_2/Bai_4/pngtree-commercial-learning-character-education-and-training-png-image_2608679.jpg"
+                    alt="">
+                <p>HAUI</p>
+                <p>2010-2020</p>
+            </div>
+            <div class="item-left">
+                <img class="img"
+                    src="/FLEX_BOX/BTVN_2/Bai_4/pngtree-commercial-learning-character-education-and-training-png-image_2608679.jpg"
+                    alt="">
+                <p>HAUI</p>
+                <p>2010-2020</p>
+            </div>
+            <div class="item-left">
+                <img class="img"
+                    src="/FLEX_BOX/BTVN_2/Bai_4/pngtree-commercial-learning-character-education-and-training-png-image_2608679.jpg"
+                    alt="">
+                <p>HAUI</p>
+                <p>2010-2020</p>
+            </div>
+            <div class="item-left">
+                <img class="img"
+                    src="/FLEX_BOX/BTVN_2/Bai_4/pngtree-commercial-learning-character-education-and-training-png-image_2608679.jpg"
+                    alt="">
+                <p>HAUI</p>
+                <p>2010-2020</p>
+            </div>
+            <div class="item-left">
+                <img class="img"
+                    src="/FLEX_BOX/BTVN_2/Bai_4/pngtree-commercial-learning-character-education-and-training-png-image_2608679.jpg"
+                    alt="">
+                <p>HAUI</p>
+                <p>2010-2020</p>
+            </div>
+        </div>
+        <div class="content-right">
+            <div class="item">
+                <div class="block"></div>
+                <div class="text">
+                    <p>Something...</p>
+                    <p>Des</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="block"></div>
+                <div class="text">
+                    <p>Something...</p>
+                    <p>Des</p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="block"></div>
+                <div class="text">
+                    <p>Something...</p>
+                    <p>Des</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="block"></div>
+                <div class="text">
+                    <p>Something...</p>
+                    <p>Des</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="block"></div>
+                <div class="text">
+                    <p>Something...</p>
+                    <p>Des</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="block"></div>
+                <div class="text">
+                    <p>Something...</p>
+                    <p>Des</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="block"></div>
+                <div class="text">
+                    <p>Something...</p>
+                    <p>Des</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>
