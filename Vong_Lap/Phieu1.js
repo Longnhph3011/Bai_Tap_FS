@@ -101,10 +101,11 @@
 // console.log(tong(so));
 
 // function giaiThua(n) {
-//   if (n === 0 || n === 1) {
-//     return 1;
+//   let sum = 1;
+//   for (let i = 1; i <= n; i++) {
+//     sum *= i;
 //   }
-//   return n * giaiThua(n - 1);
+//   return sum;
 // }
 
 // let so = 5;
