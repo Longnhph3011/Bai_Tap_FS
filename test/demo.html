@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#root {
+width: 100%;
+height: 300px;
+background-color: #333;
+}
+
+.container {
+display: flex;
+gap: 10px;
+margin-top: 20px;
+}
+
+.item-color {
+width: 200px;
+height: 50px;
+}
+
+.bg-green {
+background-color: green;
+}
+
+.bg-blue {
+background-color: blue;
+}
+
+.bg-yellow {
+background-color: yellow;
+}
+</style>
+</head>
+<body>
+<div id="root" onclick="changeColor()"></div>
+<div class="container">
+<div id="green" class="item-color bg-green"></div>
+<div id = "blue" class="item-color bg-blue"></div>
+<div id="yellow" class="item-color bg-yellow"></div>
+</div>
+</body>
+<script>
+function changeColor(color) {
+  const mau = document.getElementById('root');
+  mau.style.backgroundColor = color;
+}
+const green = document.getElementById('green');
+const blue = document.getElementById('blue');
+const yellow = document.getElementById('yellow');
+
+blue.onclick = function() {
+  changeColor('blue');
+};
+</script>
+</html>
